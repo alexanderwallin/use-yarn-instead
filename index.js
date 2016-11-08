@@ -1,16 +1,9 @@
 #!/usr/bin/env node
-const pathExists = require('path-exists')
 const psList = require('ps-list')
 const colors = require('colors')
 
-console.log('test log output')
-
-pathExists('./.hasbeenwarned').then(hasBeenWarned => {
-  if (hasBeenWarned) {
-    return
-  }
-
-  psList().then(results => {
+psList()
+  .then(results => {
     const yarnProcess = results.filter(p => p.name === 'yarn').shift()
     if (!yarnProcess) {
       console.log(`
@@ -23,5 +16,4 @@ pathExists('./.hasbeenwarned').then(hasBeenWarned => {
 `.red)
     }
   })
-    .catch(err => console.log('error:', err))
-})
+  .catch(err => console.log('error:', err))
