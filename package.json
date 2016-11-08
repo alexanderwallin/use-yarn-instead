@@ -1,0 +1,16 @@
+{
+  "name": "use-yarn-instead",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "./index.js"
+  },
+  "keywords": [],
+  "author": "Alexander Wallin <office@alexanderwallin.com> (http://alexanderwallin.com)",
+  "license": "ISC",
+  "dependencies": {
+    "path-exists": "^3.0.0",
+    "ps-list": "^3.1.0"
+  }
+}
