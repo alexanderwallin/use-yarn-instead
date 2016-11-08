@@ -3,6 +3,8 @@ const pathExists = require('path-exists')
 const psList = require('ps-list')
 const colors = require('colors')
 
+console.log('test log output')
+
 pathExists('./.hasbeenwarned').then(hasBeenWarned => {
   if (hasBeenWarned) {
     return
